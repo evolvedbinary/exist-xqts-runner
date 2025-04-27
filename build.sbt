@@ -4,7 +4,7 @@ name := "exist-xqts-runner"
 
 organization := "org.exist-db"
 
-scalaVersion := "2.13.8"
+scalaVersion := "2.13.16"
 
 semanticdbEnabled := true
 
@@ -12,13 +12,13 @@ semanticdbVersion := scalafixSemanticdb.revision
 
 description := "An XQTS driver for eXist-db"
 
-homepage := Some(url("https://github.com/exist-db/exist-xqts-runner"))
+homepage := Some(url("https://github.com/evolvedbinary/exist-xqts-runner"))
 
 startYear := Some(2018)
 
 organizationName := "The eXist Project"
 
-organizationHomepage := Some(url("https://www.exist-db.org"))
+organizationHomepage := Some(url("https://www.evolvedbinary.com"))
 
 licenses := Seq("LGPL-3.0" -> url("http://opensource.org/licenses/lgpl-3.0"))
 
@@ -26,8 +26,8 @@ headerLicense := Some(HeaderLicense.LGPLv3(startYear.value.map(_.toString).get, 
 
 scmInfo := Some(ScmInfo(
   url(homepage.value.map(_.toString).get),
-  "scm:git@github.com:exist-db/exist-xqts-runner.git",
-  "scm:git@github.com:exist-db/exist-xqts-runner.git"
+  "scm:git@github.com:evolvedbinary/exist-xqts-runner.git",
+  "scm:git@github.com:evolvedbinary/exist-xqts-runner.git"
 ))
 
 developers := List(
@@ -77,9 +77,9 @@ resolvers ++= Seq(
   "eXist-db Maven Repo" at "https://raw.github.com/eXist-db/mvn-repo/master/"
 )
 
-javacOptions ++= Seq("-source", "17", "-target", "17")
+javacOptions ++= Seq("-source", "21", "-target", "21")
 
-scalacOptions ++= Seq("-target:jvm-17", "-encoding", "utf-8", "-deprecation", "-feature", "-Ywarn-unused")
+scalacOptions ++= Seq("-target:jvm-21", "-encoding", "utf-8", "-deprecation", "-feature", "-Ywarn-unused")
 
 // Fancy up the Assembly JAR
 Compile / packageBin / packageOptions +=  {
