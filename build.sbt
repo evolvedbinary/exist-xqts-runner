@@ -1,4 +1,5 @@
 import ReleaseTransformations._
+import xerial.sbt.Sonatype.sonatypeCentralHost
 
 name := "exist-xqts-runner"
 
@@ -136,6 +137,8 @@ Compile / assembly / artifact := {
 addArtifact(Compile / assembly / artifact, assembly)
 
 // Publish to Maven Repo
+
+ThisBuild / sonatypeCredentialHost := sonatypeCentralHost
 
 publishMavenStyle := true
 
